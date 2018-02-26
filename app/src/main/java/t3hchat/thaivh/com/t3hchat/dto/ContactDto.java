@@ -7,9 +7,8 @@ package t3hchat.thaivh.com.t3hchat.dto;
 public class ContactDto {
 
     String name;
-    String message;
     String tel;
-    String time;
+    String img;
 
     public ContactDto() {
     }
@@ -22,14 +21,6 @@ public class ContactDto {
         this.name = name;
     }
 
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
     public String getTel() {
         return tel;
     }
@@ -38,11 +29,11 @@ public class ContactDto {
         this.tel = tel;
     }
 
-    public String getTime() {
-        return time;
+    public String getImg() {
+        return img;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setImg(String img) {
+        this.img = img;
     }
 }

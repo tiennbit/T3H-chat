@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">T3h Chat</string>
+    <string name="domain">localhost</string>
 </resources>

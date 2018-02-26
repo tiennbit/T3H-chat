@@ -5,10 +5,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import t3hchat.thaivh.com.t3hchat.R;
 import t3hchat.thaivh.com.t3hchat.dto.ContactDto;
 
@@ -38,6 +42,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
         ContactDto contactDto = userDtoList.get(position);
         holder.tvName.setText(contactDto.getName());
+        Glide.with(context).load(contactDto.getImg()).into(holder.avt);
     }
 
     @Override
@@ -49,6 +54,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
     class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView tvName;
+        private CircleImageView avt;
         public ViewHolder(View itemView) {
             super(itemView);
             initComponent(itemView);

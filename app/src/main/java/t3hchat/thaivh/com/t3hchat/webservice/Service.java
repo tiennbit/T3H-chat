@@ -11,6 +11,6 @@ import t3hchat.thaivh.com.t3hchat.dto.ContactDto;
  */
 
 public interface Service {
-    @GET("/users")
+    @GET("/?get=contacts")
     Call<List<ContactDto>> getContact();
 }

@@ -47,7 +47,10 @@ public class ContactListFragment extends BaseFragment implements ContactListView
     @Override
     public void initLizeComponent() {
         rcvContact = rootView.findViewById(R.id.rcv_contact);
-        rcvContact.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayoutManager llm = new LinearLayoutManager(getContext());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        rcvContact.setLayoutManager(llm);
+        //rcvContact.setLayoutManager(new LinearLayoutManager(getContext()));
         prbLoading = rootView.findViewById(R.id.prb_loading);
     }
 
